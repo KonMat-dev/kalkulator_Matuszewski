@@ -8,28 +8,42 @@
         Title="Kalkulator" Height="450" Width="841.771">
     <Grid Margin="0,0,2,0" RenderTransformOrigin="0.5,0.5">
 
-        <TextBox x:Name="ekran" HorizontalAlignment="Left" Height="85" Margin="40,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="761" FontSize="24" Grid.Column="0" FontWeight="Bold" RenderTransformOrigin="0.5,0.5"/>
-        <Button x:Name="siedem" Content="7" HorizontalAlignment="Left" Margin="40,126,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Grid.Row="0" Grid.Column="0" Click="siedem_Click" />
-        <Button x:Name="cztery" Content="4" HorizontalAlignment="Left" Margin="40,195,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="cztery_Click" />
-        <Button x:Name="jeden" Content="1" HorizontalAlignment="Left" Margin="40,264,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="jeden_Click" />
-        <Button x:Name="osiem" Content="8" HorizontalAlignment="Left" Margin="162,126,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="osiem_Click"  />
-        <Button x:Name="piec" Content="5" HorizontalAlignment="Left" Margin="162,195,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="piec_Click" />
-        <Button x:Name="dwa" Content="2" HorizontalAlignment="Left" Margin="162,264,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="dwa_Click" />
-        <Button x:Name="dziewiec" Content="9" HorizontalAlignment="Left" Margin="284,126,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="dziewiec_Click" />
-        <Button x:Name="szesc" Content="6" HorizontalAlignment="Left" Margin="284,195,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="szesc_Click" />
-        <Button x:Name="trzy" Content="3" HorizontalAlignment="Left" Margin="284,264,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="trzy_Click" />
-        <Button x:Name="zero" Content="0" HorizontalAlignment="Left" Margin="40,333,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="zero_Click" />
-        <Button x:Name="kropka" Content="." HorizontalAlignment="Left" Margin="162,333,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="kropka_Click"  />
-        <Button x:Name="usun" Content="C" HorizontalAlignment="Left" Margin="284,333,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="usun_Click" />
-        <Button x:Name="plus" Content="+" HorizontalAlignment="Left" Margin="440,126,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="plus_Click" />
-        <Button x:Name="mnozenie" Content="*" HorizontalAlignment="Left" Margin="440,195,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="mnozenie_Click"  />
-        <Button x:Name="rowna" Content="=" HorizontalAlignment="Left" Margin="440,333,0,0" VerticalAlignment="Top" Width="361" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="rowna_Click"  />
-        <Button x:Name="minus" Content="-" HorizontalAlignment="Left" Margin="562,126,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="minus_Click"  />
-        <Button x:Name="dzielenie" Content="/" HorizontalAlignment="Left" Margin="562,195,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="dzielenie_Click"  />
-        <Button x:Name="znak_odwrotny" Content="+-" HorizontalAlignment="Left" Margin="562,264,0,0" VerticalAlignment="Top" Width="239" Height="64" FontSize="24" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Click="znak_odwrotny_Click" />
-        <Button x:Name="pierwiastek" HorizontalAlignment="Left" Margin="440,264,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Content="√" Grid.Column="0" Grid.Row="0" Click="pierwiastek_Click"  />
-        <Button x:Name="pierwiastek_Copy" HorizontalAlignment="Left" Margin="684,195,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Content="^" Grid.Column="0" Grid.Row="0" Click="pierwiastek_Copy_Click"  />
-        <Button x:Name="potegadoy" HorizontalAlignment="Left" Margin="684,126,0,0" VerticalAlignment="Top" Width="117" Height="64" FontSize="24" FontWeight="Bold" Content="x^y" Grid.Column="0" Grid.Row="0" Click="potegadoy_Click"  />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="ekran" FontSize="24" FontWeight="Bold" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" />
+        <Button x:Name="siedem" Content="7" FontSize="24" FontWeight="Bold" Grid.Row="1" Grid.Column="0" Click="siedem_Click" />
+        <Button x:Name="cztery" Content="4" FontSize="24" FontWeight="Bold" Grid.Row="2" Grid.Column="0" Click="cztery_Click" />
+        <Button x:Name="jeden" Content="1" FontSize="24" FontWeight="Bold" Grid.Row="3" Grid.Column="0" Click="jeden_Click" />
+        <Button x:Name="osiem" Content="8" FontSize="24" FontWeight="Bold" Grid.Row="1" Grid.Column="1" Click="osiem_Click"  />
+        <Button x:Name="piec" Content="5" FontSize="24" FontWeight="Bold" Grid.Row="2" Grid.Column="1" Click="piec_Click" />
+        <Button x:Name="dwa" Content="2" FontSize="24" FontWeight="Bold" Grid.Row="3" Grid.Column="1" Click="dwa_Click" />
+        <Button x:Name="dziewiec" Content="9" FontSize="24" FontWeight="Bold" Grid.Row="1" Grid.Column="2" Click="dziewiec_Click" />
+        <Button x:Name="szesc" Content="6" FontSize="24" FontWeight="Bold" Grid.Row="2" Grid.Column="2" Click="szesc_Click" />
+        <Button x:Name="trzy" Content="3" FontSize="24" FontWeight="Bold" Grid.Row="3" Grid.Column="2" Click="trzy_Click" />
+        <Button x:Name="zero" Content="0" FontSize="24" FontWeight="Bold" Grid.Row="4" Grid.Column="0" Click="zero_Click" />
+        <Button x:Name="kropka" Content="." FontSize="24" FontWeight="Bold" Grid.Row="4" Grid.Column="1" Click="kropka_Click"  />
+        <Button x:Name="usun" Content="C" FontSize="24" FontWeight="Bold" Grid.Row="4" Grid.Column="2" Click="usun_Click" />
+        <Button x:Name="plus" Content="+" FontSize="24" FontWeight="Bold" Grid.Row="1" Grid.Column="3" Click="plus_Click" />
+        <Button x:Name="mnozenie" Content="*" FontSize="24" FontWeight="Bold" Grid.Row="2" Grid.Column="3" Click="mnozenie_Click"  />
+        <Button x:Name="rowna" Content="=" FontSize="24" FontWeight="Bold" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="5" Click="rowna_Click"  />
+        <Button x:Name="minus" Content="-" FontSize="24" FontWeight="Bold" Grid.Row="1" Grid.Column="4"  Click="minus_Click"  />
+        <Button x:Name="dzielenie" Content="/" FontSize="24" FontWeight="Bold" Grid.Row="2" Grid.Column="4"  Click="dzielenie_Click"  />
+        <Button x:Name="znak_odwrotny" Content="+-" FontSize="24" FontWeight="Bold" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="4" Click="znak_odwrotny_Click" />
+
 
 
     </Grid>
